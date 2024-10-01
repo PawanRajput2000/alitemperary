@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 // Specify the allowed origin
 app.use(cors({
-  origin: 'https://app-test-ali.netlify.app'
+  origin: '*'
 }));
 
 
