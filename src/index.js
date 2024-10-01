@@ -9,7 +9,13 @@ const cors = require('cors')
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-app.use(cors());
+
+
+// Specify the allowed origin
+app.use(cors({
+  origin: 'https://app-test-ali.netlify.app'
+}));
+
 
 mongoose.connect('mongodb+srv://test:test@test.uhsus.mongodb.net/?retryWrites=true&w=majority&appName=Test').then(()=>{
     console.log('Mongodb connected')
